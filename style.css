@@ -1,0 +1,101 @@
+body {
+    background-color: #151845;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    border: 1px solid white;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.orbit {
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: spin 5s infinite linear;
+
+}
+
+@keyframes spin{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rocket {
+    background-color: aliceblue;
+    width: 50px;
+    height: 100px;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    top: 100px;
+    left: -20px;
+}
+
+.rocket::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 35px;
+    background-color: cadetblue;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    bottom: 0;
+    left: -25px;
+}
+
+.rocket::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: cadetblue;
+    border-radius: 0 0 4px 4px;
+    bottom: -5px;
+    left: 10px;
+}
+
+.window {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    left: 8px;
+    top: 20px;
+    border: 2px solid cadetblue;
+}
+
+.fire1 {
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    background-color: orange;
+    bottom: -30px;
+    left: 15px;
+    border-radius: 0 0 50% 50%;
+}
+
+.fire2 {
+    position: absolute;
+    height: 20px;
+    width: 14px;
+    background-color: orangered;
+    bottom: -25px;
+    left: 18px;
+    border-radius: 0 0 50% 50%;
+}
